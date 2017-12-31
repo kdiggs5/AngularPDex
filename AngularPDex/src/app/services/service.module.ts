@@ -8,7 +8,6 @@ import { PokemonService } from 'app/services/pokemon.service';
     CommonModule
   ],
   providers: [
-    ApiService,
     PokemonService
   ]
 })
