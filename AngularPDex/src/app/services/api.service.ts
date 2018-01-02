@@ -8,10 +8,10 @@ import { catchError, map, tap } from 'rxjs/operators';
 @Injectable()
 export class ApiService {
 
-  private baseApiUrl = "http://pokeapi.co/api/v2/";
+  private baseApiUrl = '/pokeapi';
   protected url: string;
   constructor(protected endPoint:string, protected http: HttpClient) {
-    this.url = this.baseApiUrl + this.endPoint;
+    this.url = `${this.baseApiUrl}/${this.endPoint}`;
    }
 
    private catch() : any {

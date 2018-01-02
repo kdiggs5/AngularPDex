@@ -1,14 +1,16 @@
 <mat-card>
   <mat-card-title-group>
     <mat-card-title>
-      {{title}}
+      {{pokemon.name}}
     </mat-card-title>
     <mat-card-subtitle>
-      {{subTitle}}
+      {{pokemon.id}}
     </mat-card-subtitle>
   </mat-card-title-group>
   <mat-card-content>
-    Stats here
+    <div>height: {{pokemon.height}}</div>
+    <div>weight:{{pokemon.weight}}</div>
+    <div>Base Experience: {{pokemon.base_experience}}</div>
   </mat-card-content>
   <mat-card-actions class="pokemon-card-button">
     <button mat-button>
