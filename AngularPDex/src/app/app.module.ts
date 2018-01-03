@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 import { MaterialUiModule } from './material-ui/material-ui.module';
 import { ServiceModule } from 'app/services/service.module';
@@ -25,7 +27,8 @@ import { ApiService } from 'app/services/api.service';
     ServiceModule,
     FormsModule,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: false})
   ],
   providers: [
     ApiService
